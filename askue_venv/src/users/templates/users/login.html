@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <title>Login</title>
+</head>
+
+<body>
+    {% load crispy_forms_tags %}
+    <form method="POST" action=".">
+        {% csrf_token %}
+        <div class="login-container">
+            <div class="signup-text">Sign In,Now!</div>
+            <div class="login-box">{{ form|crispy}}
+                <input type="submit" class="login-button" value="Login">
+            </div>
+
+        </div>
+    </form>
+</body>
+
+</html>

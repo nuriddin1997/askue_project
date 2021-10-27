@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <title>Welcome</title>
+
+</head>
+
+<body>
+    <div class="nav-container">
+        <div id="page-name">{{page_name}}</div>
+        <div class="nav-items">
+            <a class="nav-item" href="{% url 'home' %}">Log Out</a> {% if user.is_staff and user.is_superuser %}
+            <a class="nav-item" href="/admin/">Admin</a> {% endif %}
+            <div class="nav-item">Messages: messages</div>
+            <div class="nav-item">Contacts: contacts</div>
+            <div class="nav-item">User: {{user.username}}</div>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="menu-bar">
+            <a class="menu-button" href="{% url 'home' %}">Home</a>
+            <a class="menu-button" href="{% url 'profile' %}">Profile</a>
+            <a class="menu-button" href="http://">Remove Contact</a>
+            <a class="menu-button" href="http://">Add Contact</a>
+            <a class="menu-button" href="http://">Account Settings</a>
+            <a class="menu-button" href="http://">Calendar</a>
+            <a class="menu-button" href="http://">Reminders/Marquees</a>
+            <a class="menu-button" href="http://">About</a>
+        </div>
+        <div class="chat-bar"></div>
+        <div class="contact-bar">
+            <div class="contact-header">My Contacts</div>
+            <div class="search-contact">Search Contact</div>
+
+
+            <div class="scroll-div">
+                <div class="scroll-object">
+                    Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
+                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
+                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
+                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
+                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

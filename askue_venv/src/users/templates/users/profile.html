@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <title>{{page_title}}</title>
+</head>
+
+<body>
+    {% load crispy_forms_tags %}
+    <div class="signup-container">
+        <div class="signup-text">{{page_name}} </div>
+        <div class="user-info ">
+            <div class="flex_1 ">
+                <img class="profile-img " src="{{ user.profile.image.url }} ">
+            </div>
+            <div class="flex_2 ">
+                Username: {{user.username}}
+                <br><br> User first name: {{user.first_name}}<br><br> User last name: {{user.last_name}}
+                <br><br> User email: {{user.email}}
+            </div>
+        </div>
+        <div class="pr-pass ">
+            <div class="pr-item1 ">Bio :</div>
+            <div id="bio ">{{user.profile.bio}}</div>
+        </div>
+        <div class="pr-pass ">
+            <div class="pr-item1 ">Date You Joined :</div>
+            <div class="pr-item2 ">{{user.date_joined}}</div>
+        </div>
+        <div class="pr-pass ">
+            <div class="pr-item1 ">Last Login Time :</div>
+            <div class="pr-item2 ">{{user.last_login}}</div>
+        </div>
+        <div class="pr-pass ">
+            <div class="pr-item1 ">Your status :</div>
+            {%if user.is_active and user.is_superuser %}
+            <div class="pr-item2 ">
+                Superuser
+            </div>
+            {%elif user.is_active%}
+            <div class="pr-item2 ">
+                Active
+            </div>
+            {%endif %}
+        </div>
+        <div class="buttons">
+            <a class="edit-button" href=" {% url 'home' %} ">Edit</a>
+            <a class="close-button" href=" {% url 'home' %} "> Close &#x2715</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
