@@ -8,4 +8,5 @@ def welcome_page(request):
         "page_title": "Welcome",
         "scroll": "Thanks to my father Nuriddin! He created me.",
     }
+
     return render(request, template_name, context)

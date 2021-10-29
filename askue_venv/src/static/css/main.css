@@ -506,7 +506,7 @@ body {
     width: 80%;
     margin: 5px;
     border: 1px solid;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 .scroll-div {
@@ -520,15 +520,7 @@ body {
     height: 480px;
     overflow: hidden;
     overflow-y: scroll;
-    background-color: #f1f1f1;
-}
-
-.scroll-object {
-    margin-top: 6px;
-    margin-right: 20%;
-    color: rgba(0, 0, 0, 0.5);
-    font-family: Lato, sans-serif;
-    font-size: 30px;
+    background-color: white;
 }
 
 .contact-header {
@@ -543,4 +535,19 @@ body {
     height: 5%;
     width: 98%;
     margin: 15px;
+}
+
+.one-contact {
+    margin-top: 10px;
+    text-decoration: none;
+    color: blue;
+    height: 40px;
+    width: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    border-bottom: 1px solid;
+    text-align: center;
+    align-items: center;
 }

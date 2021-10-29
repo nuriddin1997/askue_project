@@ -36,7 +36,10 @@
             <a class="menu-button" href="http://">About</a>
         </div>
         <div class="chat-bar">
-            <div class="chat_name"></div>
+            <div class="chat_name">
+                <div class="chat_name_search"></div>
+                <div class="chat_name_list"></div>
+            </div>
 
             <div class="chat_window">
                 <div class="chat_room_name"></div>
@@ -52,15 +55,13 @@
 
 
             <div class="scroll-div">
-                <div class="scroll-object">
-                    Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
-                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
-                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
-                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br> Salom
-                    <br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>Salom<br>
 
+                <ul>
+                    {% for contact_name in contact_names %}
+                    <div class="one-contact">
+                        <a href="">{{contact_name.username}}</a><br></div>{%endfor%}
+                </ul>
 
-                </div>
             </div>
         </div>
     </div>

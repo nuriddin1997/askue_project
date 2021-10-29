@@ -1,4 +1,5 @@
 .chat_name {
+    flex-direction: column;
     border-radius: 5px;
     background-color: rgba(58, 175, 169, 0.5);
     justify-content: center;
@@ -6,9 +7,28 @@
     width: 40%;
     height: 615px;
     border: 1px solid blue;
+    border: 1px solid rgb(58, 175, 169);
+}
+
+.chat_name_list {
+    border-radius: 5px;
+    justify-content: center;
+    margin: 2px;
+    width: 100%;
+    height: 568px;
+    border: 1px solid blue;
     overflow: hidden;
     overflow-y: scroll;
     border: 1px solid rgb(58, 175, 169);
+}
+
+.chat_name_search {
+    border-radius: 5px;
+    margin: 1px;
+    width: 99%;
+    height: 38px;
+    border: 1px solid rgb(58, 175, 169);
+    overflow: hidden;
 }
 
 .chat_window {
