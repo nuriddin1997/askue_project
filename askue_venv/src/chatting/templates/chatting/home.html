@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/chat.css">
     <title>Welcome</title>
 
 </head>
@@ -18,7 +19,7 @@
         <div class="nav-items">
             <a class="nav-item" href="{% url 'home' %}">Log Out</a> {% if user.is_staff and user.is_superuser %}
             <a class="nav-item" href="/admin/">Admin</a> {% endif %}
-            <div class="nav-item">Messages: messages</div>
+            <div class="nav-item">New Messages: messages</div>
             <div class="nav-item">Contacts: contacts</div>
             <div class="nav-item">User: {{user.username}}</div>
         </div>
@@ -34,7 +35,17 @@
             <a class="menu-button" href="http://">Reminders/Marquees</a>
             <a class="menu-button" href="http://">About</a>
         </div>
-        <div class="chat-bar"></div>
+        <div class="chat-bar">
+            <div class="chat_name"></div>
+
+            <div class="chat_window">
+                <div class="chat_room_name"></div>
+                <div class="chat_room"></div>
+                <div class="chat_room_typing"></div>
+                <div class="send_button">Send</div>
+            </div>
+
+        </div>
         <div class="contact-bar">
             <div class="contact-header">My Contacts</div>
             <div class="search-contact">Search Contact</div>

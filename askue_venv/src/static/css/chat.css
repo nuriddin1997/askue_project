@@ -1,0 +1,72 @@
+.chat_name {
+    border-radius: 5px;
+    background-color: rgba(58, 175, 169, 0.5);
+    justify-content: center;
+    margin: 2px;
+    width: 40%;
+    height: 615px;
+    border: 1px solid blue;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 1px solid rgb(58, 175, 169);
+}
+
+.chat_window {
+    border-radius: 5px;
+    background-color: rgba(58, 175, 169, 0.5);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2px;
+    width: 58%;
+    height: 615px;
+    border: 1px solid rgb(58, 175, 169);
+}
+
+.chat_room {
+    border-radius: 5px;
+    margin: 1px;
+    width: 99%;
+    height: 470px;
+    border: 1px solid rgb(58, 175, 169);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.chat_room_name {
+    border-radius: 5px;
+    margin: 1px;
+    width: 99%;
+    height: 38px;
+    border: 1px solid rgb(58, 175, 169);
+    overflow: hidden;
+}
+
+.chat_room_typing {
+    border-radius: 5px;
+    margin: 1px;
+    width: 99%;
+    height: 65px;
+    border: 1px solid rgb(58, 175, 169);
+    overflow: hidden;
+}
+
+.send_button {
+    background-color: rgba(58, 175, 169, 0.6);
+    align-items: center;
+    display: flex;
+    height: 30px;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    width: 99%;
+    border: 1px solid rgb(58, 175, 169);
+    box-shadow: 0.5px 0.5px 1px 1px #aaaaaa;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    margin: 1px;
+    text-decoration: none;
+    border-radius: 3px;
+}

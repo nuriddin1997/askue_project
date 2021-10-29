@@ -259,7 +259,7 @@ body {
 }
 
 .chat-bar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     display: flex;
     margin-top: 3px;
