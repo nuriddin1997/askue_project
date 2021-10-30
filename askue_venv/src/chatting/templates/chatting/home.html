@@ -20,7 +20,7 @@
             <a class="nav-item" href="{% url 'home' %}">Log Out</a> {% if user.is_staff and user.is_superuser %}
             <a class="nav-item" href="/admin/">Admin</a> {% endif %}
             <div class="nav-item">New Messages: messages</div>
-            <div class="nav-item">Contacts: contacts</div>
+            <div class="nav-item">Contacts: {{contact_counts}}</div>
             <div class="nav-item">User: {{user.username}}</div>
         </div>
     </div>
@@ -45,7 +45,7 @@
                 <div class="chat_room_name"></div>
                 <div class="chat_room"></div>
                 <div class="chat_room_typing"></div>
-                <div class="send_button">Send</div>
+                <button class="send_button">Send</button>
             </div>
 
         </div>
@@ -56,12 +56,12 @@
 
             <div class="scroll-div">
 
-                <ul>
-                    {% for contact_name in contact_names %}
+                <ul>{% for contact_name in contact_names %}
                     <div class="one-contact">
-                        <a href="">{{contact_name.username}}</a><br></div>{%endfor%}
+                        <a class="no-decoration" href="">{{contact_name.username}}</a><br>
+                    </div>
+                    {%endfor%}
                 </ul>
-
             </div>
         </div>
     </div>

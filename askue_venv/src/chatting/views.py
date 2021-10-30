@@ -4,13 +4,11 @@ from django.contrib.auth.models import User
 # Create your views here.
 def home(request):
     contact_names = User.objects.all()
-    # for contact_item in contacts_name:
-    #     print(contact_item.username)
-
-    # print(contacts_name)
-    # print(type(contact_item))
+    contact_counts = contact_names.count()
+    print(contact_counts)
     template_name = "chatting/home.html"
     context = {
+        "contact_counts": contact_counts,
         "contact_names": contact_names,
         "page_name": "ASKUE",
         "page_title": "Home",
